@@ -1,83 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<meta name="description" content="">
-		<meta name="author" content="">
-		<link rel="icon" href="./favicon.ico">
+<head>
+	<meta charset="UTF-8">
+	<title>CheapTaxi</title>
+	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 	
-		<title>СтройИнвест - корпоративный сайт</title>
-	
-		<!-- Bootstrap grid CSS -->
-		<link href="css/bootstrap-grid.min.css" rel="stylesheet">
-		<!-- Fonts Google Roboto -->
-		<link href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=cyrillic" rel="stylesheet">
-	
-		<!-- Custom styles for this template -->
-		<link href="css/main.css" rel="stylesheet">
-	</head>
+	<link rel="stylesheet" href="css/main.css">
+	 <script defer src="js/fontawesome-all.min.js"></script>
+</head>
+<body>
 
-	<body>
-		
+	<header class="header">
 		<div class="container">
-			<div class="top-nav">
-				<div class="row justify-content-between align-items-center">
-					<div class="col-md-auto">
-						<img src="img/logo.png" alt="СтройИнвест">
-					</div>
-					
-					<div class="col-md-auto">
-						<ul class="top-nav_menu">
-							<li><a href="#">Главная</a></li>
-							<li><a href="#">О компании</a></li>
-							<li><a href="#">Наши услуги</a></li>
-							<li><a href="#">Структура</a></li>
-							<li><a href="#">Инвесторам</a></li>
-							<li><a href="#">Контакты</a></li>
-						</ul>
-					</div>
-					
-				</div>
-				
-			</div>
-			<!-- /.top-nav -->
-			<div class="row">
-				<div class="col-md-4">
-					<div class="left-sidebar">
-						<ul class="left-sidebar_menu">
-							<li><a href="#">Земля</a></li>
-							<li><a href="#">Жилая недвижимость</a></li>
-							<li><a href="#">Коммерческая недвижимость</a></li>
-							<li><a href="#">Новостройки</a></li>
-							<li><a href="#">Дома/Коттеджи</a></li>
-							<li><a href="#">Строительство</a></li>
-							<li><a href="#">Аренда</a></li>
-						</ul>
-						
-						<div class="left-sidebar_object">
-							<img src="img/objects/object_preview.jpg" alt="Фото объекта">
-							<div class="left-sidebar_object-description">
-								<h3>Жилой комплекс в г. Москва</h3>
-								<p>
-									190-квартирный 12-этажный жилой дом № 88 по ул. Ленина в микрорайоне Центральный...
-								</p>
-								<a href="#">Узнать подробнее >></a>
-							</div>
-						</div>
-
-					</div>
-				</div>
-				<div class="col-md-8"></div>
-			</div>
+			<img src="img/logo.png" class="logo">
+			<ul class="nav">
+				<li><a href="#">Регистрация</a></li>
+				<li><a href=""><i class="fas fa-sign-in-alt"></i> Войти</a></li>
+			</ul>
 		</div>
-		<!-- /.container -->
-		
+	</header>
+	
+	<section class="hero">
+		<div class="container">
+			
+				<h1>Передвижение по городу теперь стало проще</h1>
+				<div class="active-users">Зарегистрировано уже 1500 пользователей</div>
+				<a href="#" class="button-search-trip">Найти поездку</a>
+			
+		</div>
+	</section>
 
-		<!-- Bootstrap core JavaScript ================================================== -->
-		<!-- Placed at the end of the document so the pages load faster -->
-		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-		<script>window.jQuery || document.write('<script src="js/jquery-3.2.1.slim.min.js"><\/script>')</script>
-		
-	</body>
+	<section class="features">
+		<div class="container">
+			<h2>Как работает сервис</h2>
+			<ul class="features-list">
+				<li>
+					<img src="img/search_icon.png" alt="" class="feature-icon">
+					<h4 class="feature-title">Укажите куда вы хотите отправиться</h4>
+					<p class="feature-description">Проложите маршрут от своего местоположения до точки назначения, чтобы найти попутчика</p>
+				</li>
+				<li>
+					<img src="img/car_icon.png" alt="" class="feature-icon">
+					<h4 class="feature-title">Найдите попутчика, который находится поблизости</h4>
+					<p class="feature-description">Забронируйте поездку с выбранным попутчиком, чтобы отправиться по Вашему маршруту</p>
+				</li>
+				<li>
+					<img src="img/map_icon.png" alt="" class="feature-icon">
+					<h4 class="feature-title">Отправляйтесь в путь быстро и недорого</h4>
+					<p class="feature-description">Каждый попутчик имеет свой рейтинг на основе отзывов пользователей. Не забудьте и Вы оставить свой отзыв</p>
+				</li>
+			</ul>
+		</div>
+	</section>
+
+</body>
 </html>
