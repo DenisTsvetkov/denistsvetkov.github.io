@@ -1,0 +1,51 @@
+html{
+	font-size: 10px;
+	
+}
+body{
+	font-family: 'Roboto', sans-serif;
+}
+.home{
+	background: url("../img/home-bg.jpg") no-repeat center center;
+
+	background-size: cover;
+	width: 100%;
+	height: 100vh;
+}
+.home::before {
+ content:'';
+ width: 100%;
+ height: 100%;
+ left: 0;
+ top: 0;
+ position: absolute;
+ background-color: rgba( 0, 0, 0, 0.2);
+}
+.authorization-form{
+	text-align: center;
+	position: absolute;
+	top:50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	padding: 100px 70px;
+	background: rgba(255,255,255,.8);
+	border-radius: 5px;
+}
+
+.authorization-form input{
+	display: block;
+	margin: 0 auto;
+	outline: none;
+	border: none;
+	padding: 7px 15px;
+	margin-bottom: 5px;
+}
+
+.authorization-btn{
+	background-color: #fff;
+	color:#333;
+	padding: 10px 15px;
+	border-radius: 5px;
+	border: 1px solid #333;
+
+}
