@@ -5,6 +5,7 @@
 	<title>CheapTaxi</title>
 	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="css/modal-window.css">
 	
@@ -14,26 +15,36 @@
 <body>
 	<div class="modal-window">
 		<ul class="switch">
-			<li class="active-switch">Регистрация</li>
-			<li>Войти</li>
+			<li id="registration-btn">Регистрация</li>
+			<li id="enter-btn">Войти</li>
 		</ul>
-		<form action="" class="form-registration">
-			&#xf007;
-			<input class="small-input" type="text" placeholder=" Имя">
+		<form action="#" class="form-registration" id="form-registration">
+			
+			<input class="small-input" type="text" placeholder="Имя">
 			<input class="small-input" type="text" placeholder="Фамилия">
 			<input type="text" placeholder="Эл.почта">
 			<input type="text" placeholder="Телефон">
-			<input type="text" placeholder="Пароль">
-			<input type="text" placeholder="Подтвердить пароль">
-			<input class="registration-button" type="submit" value="Зарегистрироваться">
+			<input type="password" placeholder="Пароль">
+			<input type="password" placeholder="Подтвердить пароль">
+			<input class="form-button" type="submit" value="Зарегистрироваться">
 		</form>
+
+		<form action="#" class="form-registration form-enter" id="form-enter">
+			
+			
+			<input type="text" placeholder="Эл.почта или телефон">
+			<input type="password" placeholder="Пароль">
+			
+			<input class="form-button" type="submit" value="Войти">
+		</form>
+
 	</div>
 	<header class="header">
 		<div class="container">
 			<img src="img/logo.png" class="logo">
 			<ul class="nav">
-				<li><a href="#">Регистрация</a></li>
-				<li><a href=""><i class="fas fa-sign-in-alt"></i> Войти</a></li>
+				<li><a href="#" id="reg-link">Регистрация</a></li>
+				<li><a href="#" id="enter-link"><i class="fas fa-sign-in-alt"></i> Войти</a></li>
 			</ul>
 		</div>
 	</header>
@@ -69,5 +80,7 @@
 		</div>
 	</section>
 
+<script src="js/jquery-3.3.1.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>

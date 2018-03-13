@@ -1,4 +1,4 @@
-@import url("https://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css");
+
 .modal-window{
 	position: absolute;
 	top:50px;
@@ -9,7 +9,8 @@
 	border-radius: 15px;
 	text-align: center;
 	box-shadow: 0 0 30px rgba(0,0,0,0.5);
-	display: block;
+	max-width: 755px;
+	display: none;
 }
 
 .modal-window .switch{
@@ -23,10 +24,15 @@
 	height: 31px;
 	line-height: 31px;
 	text-align: center;
-	color:#6c1010;
+	color:#333;
 	font-size: 14px;
 	background-color: #f9f9f9;
 }
+
+.modal-window .switch li:hover{
+	cursor: pointer;
+}
+
 .modal-window .switch li:first-child{
 	border-top-left-radius: 15px;
 	border-bottom-left-radius: 15px;
@@ -41,21 +47,21 @@
 }
 .form-registration{
 	margin-top:74px;
-	font-size: 14px;
-
+	font-size: 0px;
+	display:none;
 }
 
-.form-registration input[type="text"]{
+.form-registration input{
 	width: 392px;
 	padding: 16px 0 14px 43px;
 	border-radius: 5px;
 	border: 1px solid #686868;
 	outline: none;
 	margin-bottom: 28px;
-	font-family: "Font Awesome 5 Free";
+
 }
-.form-registration input[type="text"].small-input{
-	width: 180px;
+.form-registration input.small-input{
+	width: 182px;
 	display: inline-block;
 
 }
@@ -63,14 +69,26 @@ input.small-input:nth-child(2){
 	margin-left: 28px;
 }
 
-.form-registration .registration-button{
+.form-registration .form-button{
 	border-radius: 15px;
 	color:#fff;
-	display: inline-block;
+	display: block;
 	padding: 21px 48px 19px;
 	border:none;
 	outline: none;
 	background: linear-gradient(to top, rgba(30, 174, 145, 0.45), rgba(247, 237, 84, 0.45)), #14cf8b;
 	font-weight: 700;
+	margin: 0 auto;
+	transition: background .2s;
 }
+
+.form-registration .form-button:hover{
+	background: linear-gradient(to top, rgba(30, 174, 145, 0.45), rgba(247, 237, 84, 0.45)), #11B376;
+	cursor: pointer;
+}
+
+.show{
+	display: block; 
+}
+
 
