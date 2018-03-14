@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 500 500" style="enable-background:new 0 0 500 500;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#00B3F9;}
+	.st1{fill:none;stroke:#2D466F;stroke-width:7;stroke-linecap:round;stroke-miterlimit:10;}
+	.st2{fill:none;}
+	.st3{fill:#FFFFFF;}
+	.st4{font-family:'Arciform';}
+	.st5{font-size:61px;}
+	.st6{letter-spacing:15;}
+</style>
+<path class="st0" d="M250.9,500c117.2,0,214.7-83.7,236.3-194.5H14.6C36.2,416.3,133.8,500,250.9,500z"/>
+<path class="st1" d="M412.5,80.6c48.7,44.1,79.3,107.8,79.3,178.6c0,133-107.8,240.8-240.8,240.8S10.1,392.2,10.1,259.2
+	c0-68,28.2-129.5,73.6-173.3"/>
+<rect x="234.1" y="227.3" class="st0" width="23" height="77.8"/>
+<rect x="85.2" y="32.9" class="st0" width="292.8" height="182.7"/>
+<line class="st1" x1="151.1" y1="302.3" x2="350.6" y2="302.3"/>
+<rect x="236.1" y="215.6" class="st1" width="32.9" height="86.7"/>
+<path class="st1" d="M411.3,215.6H86.2c-0.6,0-1-0.4-1-1V1c0-0.6,0.4-1,1-1h325.1c0.6,0,1,0.4,1,1v213.6
+	C412.3,215.1,411.8,215.6,411.3,215.6z"/>
+<rect x="119.7" y="61.6" class="st2" width="268.3" height="135"/>
+<text transform="matrix(1 0 0 1 119.7419 107.4072)"><tspan x="0" y="0" class="st3 st4 st5 st6">0101101</tspan><tspan x="0" y="73.2" class="st3 st4 st5 st6">1011001</tspan></text>
+</svg>
