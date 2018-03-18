@@ -3,19 +3,51 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Евразия</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/bootstrap-grid.min.css">
 	<link rel="stylesheet" href="css/login.css">
 	<link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i&amp;subset=cyrillic" rel="stylesheet">
 </head>
 <body>
-	<section class="home">
-		<form action="#" class="authorization-form">
-			<span>Вход</span>
-			<input type="text" placeholder="Номер карты">
-			<input type="password" placeholder="Пароль">
-			<input class="authorization-btn" type="submit" value="Войти">
-		</form>
+	<header class="header">
+		<div class="container">
+			<div class="row align-items-center">
+				<div class="col-2">
+					<div class="logotype">
+						<img src="img/logotype.png" alt="Евробонус.рф">
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<section class="main">
+		<div class="container">
+			<div class="row align-items-center">
+				<div class="col-xl-8 col-md-6">
+					<div class="site-description">
+						<h2 class="small-title-h2">Дорогие дизайнеры, архитекторы и партнеры</h2>
+						<h1>Добро пожаловать в клуб Евробонус.рф</h1>
+						<h2>Приглашаем вас зарабатывать больше</h2>
+						<ul class="features">
+							<li>Узнавайте информацию о новинках и эксклюзивных предложениях</li>
+							<li>Получайте ответы на все ваши вопросы напрямую от собственников компаний</li>
+							<li>Оставляйте ваши отзывы и пожелания</li>
+							<li>Покупайте в Евразии и копите баллы</li>
+							<li>Получайте возможности для продвижения и денежные призы до 50 000 руб.</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-xl-4 col-md-6">
+					<form action="#" class="sign-in">
+						<div class="form-title">Вход</div>
+						<input type="text" placeholder="Номер карты" required>
+						<input type="password" placeholder="Пароль" required>
+						<input class="sign-in-btn blue-gradient" type="submit" value="Войти">
+					</form>
+				</div>
+			</div>
+		</div>
 	</section>
 </body>
 </html>
