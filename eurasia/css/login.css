@@ -151,3 +151,9 @@ form.sign-in input[type=text], form.sign-in input[type=password]{
 		padding-top: 50px;
 	}
 }
+
+@media screen and (max-height: 768px){
+	.main{
+		padding-top: 50px;
+	}
+}
