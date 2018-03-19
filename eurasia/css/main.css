@@ -108,12 +108,13 @@ h2.small-title-h2{
 	width: 486px;
 	height: 516px;
 	background-size: contain;
-
+	z-index: 4;
 
 }
 
 .hero-description{
 	padding-top:116px;
+	z-index: 5
 }
 
 .nav{
