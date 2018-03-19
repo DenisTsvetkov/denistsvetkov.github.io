@@ -428,7 +428,9 @@ a.close-conditions:hover{
 
 	margin-right: 12px;
 }
-
+.contacts-list li{
+	margin-bottom: 25px;
+}
 .contacts-list li a:hover{
 	text-decoration: underline;
 }
