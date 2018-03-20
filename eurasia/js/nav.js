@@ -1,8 +1,9 @@
 $(function(){
-  var screenHeight = $('.hero').height()+60;
+  
   navbar();
 
   function navbar(){
+    var screenHeight = $('.hero').height()+60;
     if($(window).scrollTop() >= screenHeight){
       $('.show-nav').addClass('show');
       $(".navigation").addClass('position-fixed');
@@ -11,14 +12,15 @@ $(function(){
       $('.show-nav').removeClass('show');
       $(".navigation").removeClass('position-fixed');
     }
-        
-    $('.show-nav-btn').click(function(e){
-      e.preventDefault();
-      $('.position-fixed').toggleClass('show');
-    });
   };
+
 
   $(window).scroll(function(){
     navbar();
   });
+
+  $('.show-nav-btn').click(function(e){
+      e.preventDefault();
+      $('.position-fixed').toggleClass('show');
+    });
 });
