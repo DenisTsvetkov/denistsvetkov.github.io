@@ -31,19 +31,36 @@ h2.small-title-h2{
 }
 
 .blue-gradient{
-  background: -moz-linear-gradient( 90deg, rgb(14,71,156) 0%, rgb(43,97,217) 100%), #296396;
-  background: -webkit-linear-gradient( 90deg, rgb(14,71,156) 0%, rgb(43,97,217) 100%), #296396;
-  background: -ms-linear-gradient( 90deg, rgb(14,71,156) 0%, rgb(43,97,217) 100%), #296396;
-  transition: background-color .5s;
+	background: -webkit-linear-gradient(bottom, #0e479c, #2b61d9);
+	background: -o-linear-gradient(bottom, #0e479c, #2b61d9);
+	background: linear-gradient(to top, #0e479c, #2b61d9);
+	position: relative;
+	z-index: 1;
+	overflow: hidden;
+	transition: background-color .5s;
 }
-.blue-gradient:hover{
+.blue-gradient:after{
+	content: "";
+	position: absolute;
+	z-index: -1;
+	width: 100%;
+	height: 100%;
+	top:0;
+	left:0;
+	background: -webkit-linear-gradient(bottom, #0C387C, #2351BC);
+	background: -o-linear-gradient(bottom, #0C387C, #2351BC);
+	background: linear-gradient(to top, #0C387C, #2351BC);
+	opacity: 0;
+	transition: .2s;
+}
+.blue-gradient:hover:after{
+	opacity: 1;
+}
+.blue-gradient:hover {
 	cursor: pointer;
 }
 
-/*.container{
-	outline: 1px solid red;
-	position: relative;
-}*/
+
 
 .header{
 	width: 100%;
@@ -130,6 +147,7 @@ h2.small-title-h2{
 	font-weight: 500;
 	visibility: hidden;
 	opacity: 0;
+	z-index: 155;
 	transition: all .2s;
 }
 .show-nav.show{
@@ -198,7 +216,8 @@ h2.small-title-h2{
 .category{
 	padding:75px 0 10px;
 }
-section.category.first-section{
+section:first-child{
+	background-color: #cc0000;
 	padding-top:140px;
 }
 
@@ -397,7 +416,7 @@ section.category.first-section{
 
 .conditions{
 	width: 100%;
-	height: 485px;
+	min-height: 485px;
 	box-shadow: 0px 11px 24.84px 2.16px rgba(0, 0, 0, 0.35);
 	position: absolute;
 	z-index: 100;
@@ -539,9 +558,6 @@ a.close-conditions:hover{
 	}
 }
 @media screen and (max-width: 767px){
-	.condition-header{
-		display: inline-block;
-	}
 	.condition-header h3{
 		margin-top:10px;
 	}
@@ -549,11 +565,18 @@ a.close-conditions:hover{
 		display: block;
 	}
 	.conditions-info-company{
-		padding: 45px 20px;
+		max-height: 250px;
+		min-height: 250px;
+		padding: 20px 45px;
 	}
-
+	.conditions-description{
+		margin-top:-20px;
+		margin-left:45px;
+	}
 	.conditions-description p{
 		max-width: 80%;
+		max-height: 150px;
+		margin-bottom: 20px;
 	}
 	.condition-header h3{
 		align-self: center;
