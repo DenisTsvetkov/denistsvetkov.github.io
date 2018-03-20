@@ -311,7 +311,7 @@ section:first-child{
 .review{
 	background-color: #fdfdfd;
 	border-radius: 5px;
-	max-width: calc(100% - 78px);
+	width: calc(100% - 74px);
 	height: 280px;
 	margin: 8px auto;
 	padding-left: 27px;
@@ -403,7 +403,7 @@ section:first-child{
 	border-radius: 10px;
 	position: absolute;
 	bottom: 18px;
-	left: 5%;
+	left: 52px;
 }
 
 .write-review-btn .fa-edit{
@@ -594,4 +594,9 @@ a.close-conditions:hover{
 		align-self: center;
 	}
 
+}
+@media screen and (max-width: 420px){
+	.company-logo{
+		width: 15%;
+	}
 }
