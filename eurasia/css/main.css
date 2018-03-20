@@ -599,4 +599,9 @@ a.close-conditions:hover{
 	.company-logo{
 		width: 15%;
 	}
+	.company-condition-btn{
+		width: 250px;
+		height: 40px;
+		line-height: 40px;
+	}
 }
