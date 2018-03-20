@@ -108,7 +108,7 @@ h2.small-title-h2{
 	width: 486px;
 	height: 516px;
 	background-size: contain;
-	z-index: 4;
+	z-index: 1;
 
 }
 
@@ -117,10 +117,54 @@ h2.small-title-h2{
 	z-index: 5;
 }
 
+.show-nav{
+	position: fixed;
+	top:-55px;
+	width: 100%;
+	height: 55px;
+	z-index: 160;
+	background-color: rgba(255,255,255,1);
+	line-height: 55px;
+	color:#333;
+	font-size: 1.4rem;
+	font-weight: 500;
+	visibility: hidden;
+	opacity: 0;
+	transition: all .2s;
+}
+.show-nav.show{
+	visibility: visible;
+	opacity: 1;
+	top:0;
+}
+.show-nav-btn .burger-icon{
+	font-size: 2.4rem;
+	position: relative;
+	bottom:-4px;
+	margin: 0 13px 0 0px;
+}
+
+.position-fixed{
+	position: fixed;
+	width: 100%;
+	top:-100%;
+	z-index: 150;
+	visibility: hidden;
+	opacity: 0;
+	transition: all .2s;
+}
+
+.position-fixed.show{
+	visibility: visible;
+	opacity: 1;
+	top:54px;
+}
+
 .nav{
 	display: flex;
 	justify-content: start;
 	flex-wrap: wrap;
+	min-width: 340px;
 }
 
 .nav>li{
@@ -152,8 +196,12 @@ h2.small-title-h2{
 }
 
 .category{
-	padding:78px 0 74px;
+	padding:75px 0 10px;
 }
+section.category.first-section{
+	padding-top:140px;
+}
+
 .category h3.category-title{
 	color:#333333;
 	font-size: 2.4rem;
@@ -485,7 +533,10 @@ a.close-conditions:hover{
 	html{
 		font-size: 7px;
 	}
-	
+	.position-fixed{
+		background-color: rgba(0,0,0,0.7);
+		padding: 10px 0;
+	}
 }
 @media screen and (max-width: 767px){
 	.condition-header{
