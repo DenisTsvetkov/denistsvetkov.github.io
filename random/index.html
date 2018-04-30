@@ -61,6 +61,8 @@
       	var firstNumber = $('#first-number').val();
 		var finishNumber = $('#finish-number').val();
 		var countNumber = $('#count-number').val();
+		$('.random-text').css("animation", "none");
+		$('.random-text').css({"transform":"scale(1)"});
        e.preventDefault();
        var i=0;
        
@@ -71,6 +73,12 @@
    // счётчик и условие исполнения цикла  
 
    i=i+1; if (i<countNumber) setTimeout(f, "50");
+
+
+   if(i==countNumber){
+   	$('.random-text').css({"animation":"size 1s ease-in-out", "animation-iteration-count":"1", "transform":"scale(2)"});
+
+   }
        };
        	f();
 		
