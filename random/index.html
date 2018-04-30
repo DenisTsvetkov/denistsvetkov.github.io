@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="main.css">
+</head>
+<body>
+	<img src="book.jpg" alt="" class="book-bg">
+	<div class="content">
+	<div class="random-text">Рандомайзер</div>
+	<form action="#">
+		<!-- <input type=""> -->
+	</form>
+	<a href="#" class="random-btn">Получить случайное число</a>
+</div>
+<script src="jquery-3.3.1.js"></script>
+<script>
+
+	$(function(){
+		function getRandom(min, max) {
+  		return Math.floor(Math.random() * (max - min)) + min;
+	  }
+
+	  
+      $('.random-btn').click(function(e){
+       e.preventDefault();
+       var i=0;
+       
+
+       f=function(){
+   // тело цикла
+   $('.random-text').text(getRandom(0,1000));
+   // счётчик и условие исполнения цикла  
+
+   i=i+1; if (i<25) setTimeout(f, "50");
+       };
+       	f();
+		
+       		
+   		
+      });
+
+      
+   });
+</script>
+</body>
+</html>
