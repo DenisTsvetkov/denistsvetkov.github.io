@@ -24,7 +24,7 @@ body{
 	font-size: 60px;
 	color:#333;
 	font-weight: 700;
-
+	z-index: 5;
 
 }
 .random-btn{
@@ -36,7 +36,7 @@ body{
 	display: inline-block;
 	text-decoration: none;
 	margin-top:25px;
-	z-index: 10;
+	z-index: 100;
 }
 
 .setting{
@@ -70,6 +70,6 @@ body{
 
 @keyframes size {
 from {transform: scale(1);}
-50% {transform: scale(2.5);}
-to {transform: scale(2);}
+50% {transform: scale(2.2);}
+to {transform: scale(1.8);}
 }
