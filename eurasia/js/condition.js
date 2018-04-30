@@ -1,17 +1,15 @@
 $(function(){
-      $('.condition').click(function(e){
+    
+
+    $('.company-condition-btn').click(function(e){
        e.preventDefault();
-       var li = $(this).parents("li");
-       var d = li.children('.condition-text')
-       d.show();
+       var conditions_block = $(this).parents('li').children('.conditions');
+       conditions_block.addClass("show");
+    });
 
-
-      });
-       $(document).mouseup(function (e){ 
-        var div = $(".condition-text");
-        if (!div.is(e.target) 
-          && div.has(e.target).length === 0) { 
-          div.hide();
-        }
-      });
-   });
+    $('.close-conditions').click(function(e){
+       e.preventDefault();
+       var conditions_block = $(this).parents('.conditions');
+       conditions_block.removeClass("show");
+    });
+});
