@@ -53,7 +53,8 @@
 
 	  $('input[type=range]').on('input', function () {
    		 $(this).trigger('change');
-   		 $('.random-text').css("font-size", $('#size-number').val()+"px");
+   		 $('.random-text').css({"font-size": $('#size-number').val()+"px", "z-index":"1"});
+   		 
 
 		});
 
