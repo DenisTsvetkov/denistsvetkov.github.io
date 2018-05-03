@@ -11,13 +11,14 @@ body{
 	left:50%;
 	transform: translate(-50%,-50%);
 	z-index: -1;
+	width: 70%;
 }
 .content{
 	font-family: Arial, sans-serif;
 	position: absolute;
 	top:55%;
-	left:55%;
-	transform: translate(-50%,-50%);
+	left:61%;
+	transform: translate(-50%,-60%);
 	text-align: center;
 }
 .random-text{
@@ -36,14 +37,15 @@ body{
 	color:#fff;
 	display: inline-block;
 	text-decoration: none;
-	margin-top:25px;
+	margin:25px 0;
 	z-index: 100;
 	position: relative;
 	font-size: 12px;
 }
 
 .setting{
-	margin: 10px auto;
+	position: relative;
+	top:150px;
 	outline: 0px solid red;
 	width: 200px;
 	font-size: 12px;
