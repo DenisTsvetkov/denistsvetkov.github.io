@@ -15,8 +15,8 @@ body{
 .content{
 	font-family: Arial, sans-serif;
 	position: absolute;
-	top:50%;
-	left:50%;
+	top:55%;
+	left:55%;
 	transform: translate(-50%,-50%);
 	text-align: center;
 }
@@ -39,12 +39,14 @@ body{
 	margin-top:25px;
 	z-index: 100;
 	position: relative;
+	font-size: 12px;
 }
 
 .setting{
 	margin: 25px auto;
 	outline: 0px solid red;
-	width: 300px;
+	width: 200px;
+	font-size: 12px;
 
 }
 .setting .count{
@@ -53,10 +55,11 @@ body{
 }
 .setting input{
 	padding: 5px 7px;
-	max-width: 50px;
+	max-width: 40px;
 	border-radius: 3px;
 	border:none;
 	outline: none;
+	font-size: 9px;
 
 }
 
@@ -72,6 +75,6 @@ body{
 
 @keyframes size {
 from {transform: scale(1);}
-50% {transform: scale(2.2);}
+50% {transform: scale(2);}
 to {transform: scale(1.8);}
 }
