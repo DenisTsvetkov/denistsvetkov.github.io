@@ -10,15 +10,12 @@ function getId(url, pattern) {
 }
 
 function parserProfiles(url){
-  function getCountLikes(url){
     var x = new XMLHttpRequest();
     x.open("GET", url, true);
     x.onload = function (){
       alert( x.responseText);
     }
     x.send(null);
-  }
-
 }
 
 
