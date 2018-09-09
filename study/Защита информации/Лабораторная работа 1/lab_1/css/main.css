@@ -1,0 +1,9 @@
+input{
+	padding: 5px 10px;
+}
+#data{
+	min-width: 300px;
+}
+#form-data div{
+	margin-top:0px;
+}

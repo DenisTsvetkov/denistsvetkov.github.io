@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="css/main.css">
+	<title>Защита информации | Лабораторная работа 1</title>
+</head>
+<body>
+	<h1>Защита информации | Лабораторная работа 1</h1>
+	<h2>Вариант 1</h2>
+	<h4>Выполнил студент группы АСУ-15-1б  Цветков Д.В.</h4>
+	<p>
+		Реализовать шифрование текстового сообщения, используя любой нестандартный метод перестановки.
+	</p>
+	<h2>Шифр "Перевернутые группы"</h2>
+	<form action="#" id="form-data">
+		<div>
+			Фраза для зашифровки<br><input type="text" placeholder="Фраза для зашифровки" id="data">
+		</div><br>
+		<div>
+			Кол-во символов в группе<br><input type="number" placeholder="Кол-во символов в группе" min='1' id="count-symbols">
+		</div>
+		<br><input type="submit" value="Зашифровать">
+	</form>
+	<h2 id="result"></h2>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+
+			function reverse(s){
+    			return s.split("").reverse().join("");
+			}
+
+			function shareToGroups(text,param){
+				var reg = new RegExp('(.{1,'+param+'})', 'gim');
+				return text.match(reg);
+			}
+
+			$('#form-data>input[type=submit]').click(function(e){
+				e.preventDefault();
+				var text = $('#data').val().replace(/\s+/g, '');
+				var count_symbols = $('#count-symbols').val();
+
+				arr = shareToGroups(text, count_symbols) || '';
+   				for(var i=0; i < arr.length; i++){
+   					arr[i]=reverse(arr[i]);
+   				}
+   				var result = arr.join('');
+   				$('#result').text('Результат: '+result);
+			});
+  		});  
+	</script>
+</body>
+</html>
