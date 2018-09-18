@@ -100,14 +100,21 @@
 				});
 	  			try{
 		  			var currentValue = this.matrix[ways[k][0]][ways[k][1]];
+
+		  			if(currentValue != undefined){
 		  			console.log(currentValue);
 		  		
-		  			newMatrix[ways[k][0]][ways[k][1]] = '-';
+		  			
 		  			newMatrix[currentPosition[0]][currentPosition[1]] = currentValue;
+		  			newMatrix[ways[k][0]][ways[k][1]] = '-';
 		  			StateMatrixs.States[0].push(newMatrix);
+		  			}
+		  			
 		  		} catch(e){
 		  			console.log('undefined');
 		  		}
+
+
 		  	}
 		  	//return currentPosition[1];
 		  	
@@ -125,6 +132,10 @@
 			let state = new State(StateMatrixs.States[0][i]);
 			state.drawMatrix();
 			state.permutationMatrix();
+
+			if(state.g == 9){
+				break;
+			}
 
 		}
 
