@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="css/main.css">
+	<title>Защита информации | Лабораторная работа 2</title>
+</head>
+<body>
+	<h1>Защита информации | Лабораторная работа 2</h1>
+	<h2>Вариант 20</h2>
+	<h4>Выполнил студент группы АСУ-15-1б  Цветков Д.В.</h4>
+	<p>
+		Реализовать шифрование текстового сообщения, используя любой нестандартный метод перестановки.
+	</p>
+	<h2>Шифр "Перевернутые группы"</h2>
+	<form action="#" id="form-data">
+		<div>
+			Фраза для зашифровки<br><input type="text" placeholder="Фраза для зашифровки" id="data">
+		</div><br>
+		<div>
+			Кол-во символов в группе<br><input type="number" placeholder="Кол-во символов в группе" min='1' id="count-symbols">
+		</div>
+		<br><input type="submit" value="Зашифровать">
+	</form>
+	<h2 id="result"></h2>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+
+			function getRandomInt(min, max) {
+			  return Math.floor(Math.random() * (max - min)) + min;
+			}
+
+			function isPrime(value) {
+				var i, max;
+
+				if (!value) {
+				return 'Введите число';
+				}
+
+				if (value < 2 || value % 2 === 0 && value !== 2) {
+				return false;
+				}
+
+				max = Math.round(Math.sqrt(value)) + 1;
+
+				for (i = 3; i < max; i += 2) {
+				if (value % i === 0) {
+				return false;
+				}
+				}
+
+				return true;
+			}
+
+			var k = 15;
+			var simpleNumber = BigInt(getRandomInt(10000000000000000000, 100000000000000000000));
+			//var simpleNumber = getRandomInt(1000000, 10000000);
+
+			// тест Миллера — Рабина на простоту числа
+			// производится k раундов проверки числа n на простоту
+			function MillerRabinTest(n, k)
+			{
+			    // если n == 2 или n == 3 - эти числа простые, возвращаем true
+			    if (n == 2 || n == 3)
+			        return true;
+			 
+			    // если n < 2 или n четное - возвращаем false
+			    if (n < 2 || n % 2 == 0)
+			        return false;
+			 
+			    // представим n − 1 в виде (2^s)·t, где t нечётно, это можно сделать последовательным делением n - 1 на 2
+			    var t = n - 1;
+			 
+			    s = 0;
+			 
+			    while (t % 2 == 0)
+			    {
+			        t /= 2;
+			        s += 1;
+			    }
+			 
+			    // повторить k раз
+			    for (var i = 0; i < k; i++)
+			    {
+			        // выберем случайное целое число a в отрезке [2, n − 2]
+			        //RNGCryptoServiceProvider rng = new RNGCryptoServiceProvider();
+			 		var a = getRandomInt(2, n-2);
+			 		// var _a = [];
+			   //      _a = new byte[n.ToByteArray().LongLength];
+			 
+			   //      var a;
+			 
+			   //      do
+			   //      {
+			   //          rng.GetBytes(_a);
+			   //          a = new BigInteger(_a);
+			   //      }
+			   //      while (a < 2 || a >= n - 2);
+			 
+			        // x ← a^t mod n, вычислим с помощью возведения в степень по модулю
+
+			        x = Math.pow(a, t) % n;
+			 
+			        // если x == 1 или x == n − 1, то перейти на следующую итерацию цикла
+			        if (x == 1 || x == n - 1)
+			            continue;
+			 
+			        // повторить s − 1 раз
+			        for (r = 1; r < s; r++)
+			        {
+			            // x ← x^2 mod n
+			            x = Math.pow(x, 2) % n;
+			 
+			            // если x == 1, то вернуть "составное"
+			            if (x == 1)
+			                return false;
+			 
+			            // если x == n − 1, то перейти на следующую итерацию внешнего цикла
+			            if (x == n - 1)
+			                break;
+			        }
+			 
+			        if (x != n - 1)
+			            return false;
+			    }
+			 
+			    // вернуть "вероятно простое"
+			    return true;
+			}
+			//simpleNumber = getRandomInt(10000000000000000000, 100000000000000000000);
+			while(MillerRabinTest(simpleNumber, k) == false && simpleNumber < 100000000000000000000){
+				simpleNumber = simpleNumber+1;
+			}
+			console.log("Число:", simpleNumber, "Простое:", MillerRabinTest(simpleNumber, k))
+  		});  
+	</script>
+</body>
+</html>
