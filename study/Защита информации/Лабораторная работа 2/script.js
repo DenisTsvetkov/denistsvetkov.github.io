@@ -1,42 +1,13 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-	<meta charset="UTF-8">
-	<link rel="stylesheet" href="css/main.css">
-	<title>Защита информации | Лабораторная работа 2</title>
-</head>
-<body>
-	<h1>Защита информации | Лабораторная работа 2</h1>
-	<h2>Вариант 20</h2>
-	<h4>Выполнил студент группы АСУ-15-1б  Цветков Д.В.</h4>
-	<p>
-		Реализовать шифрование текстового сообщения, используя любой нестандартный метод перестановки.
-	</p>
-	<h2>Шифр "Перевернутые группы"</h2>
-	<form action="#" id="form-data">
-		<div>
-			Фраза для зашифровки<br><input type="text" placeholder="Фраза для зашифровки" id="data">
-		</div><br>
-		<div>
-			Кол-во символов в группе<br><input type="number" placeholder="Кол-во символов в группе" min='1' id="count-symbols">
-		</div>
-		<br><input type="submit" value="Зашифровать">
-	</form>
-	<h2 id="result"></h2>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script type="text/javascript">
-		$(function(){
-
-			function getRandomInt(min, max) {
+function getRandomInt(min, max) {
         return Math.floor(Math.random() * (max - min)) + min;
       }
 
       
 
-      var k1 = 1000000;
-      var k2 = 10000000;
+      var k1 = 10000;
+      var k2 = 100000;
 
-      var k = 10;
+      var k = 15;
 
       var simpleNumber = getRandomInt(k1, k2);
 
@@ -112,14 +83,7 @@
           return true;
       }
       
-      while(MillerRabinTest(simpleNumber, k) != true && simpleNumber <= k2){
+      while(MillerRabinTest(simpleNumber, k) != true && simpleNumber < k2){
         simpleNumber += 1;
-        if(simpleNumber == k2-1){
-        	simpleNumber = k1;
-        }
       }
       console.log('Число: ', simpleNumber, ' Простое: ', MillerRabinTest(simpleNumber, k));
-  		});  
-	</script>
-</body>
-</html>
