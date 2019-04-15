@@ -60,17 +60,17 @@
 				{
 					'name': 'Яблоко',
 					'props': [0.7,0,0.7,0.3,0.3,0,0,0,1,0]
-				},
-			'8':
-				{
-					'name': 'Молоко',
-					'props': [0,0,0,0,0,1,0.5,0,1,0]
-				},
-			'9':
-				{
-					'name': 'Мёд',
-					'props': [1,0,0.1,0.9,0,1,1,0,1,0]
 				}
+			// '8':
+			// 	{
+			// 		'name': 'Молоко',
+			// 		'props': [0,0,0,0,0,1,0.5,0,1,0]
+			// 	},
+			// '9':
+			// 	{
+			// 		'name': 'Мёд',
+			// 		'props': [1,0,0.1,0.9,0,1,1,0,1,0]
+			// 	}
 		}
 
 		class ExpertModel{
@@ -159,7 +159,7 @@
 		}
 
 		model.showModel();
-		var elem = model.specifyObject(objects[8].props);
+		var elem = model.specifyObject(objects[3].props);
 		console.log(elem);
 		console.log("Свойства ["+objects[elem].props+"] \n Скорее всего это: "+objects[elem].name);
 	</script>
